@@ -1,14 +1,15 @@
-z = int(input())
-for i in range(z):
-    l = []
-    a = int(input())
-    for i in range(a):
-        b = int(input())
-        l.append(b)
-    if l.count(max(l)) >= 2 :
-        print("no winner")
+a = int(input())
+for i in range(a):
+  t = []
+  b = int(input())
+  for j in range(b):
+    t.append(int(input()))
+  if t.count(max(t)) > 1:
+    print('no winner')
+  else:
+    y = max(t)
+    
+    if sum(t)-max(t) >= y:
+      print('minority winner',t.index(y)+1)
     else:
-        if max(l) > int(sum(l)/2):
-            print("majority winner", l.index(max(l))+1)
-        else:
-            print("minority winner", l.index(max(l))+1)    
+      print('majority winner',t.index(y)+1)
